@@ -1,0 +1,20 @@
+#!/bin/bash
+# vim filetype=bash
+
+PROGRAM="echo line details"
+LOG="logfile"
+ARGSFILE="harnessArgs"
+
+function runner {
+      cat $1 | xargs -L 1 -I args $PROGRAM args 2>&1 | tee -a $LOG
+      echo -------------------------------------------------- >> $LOG
+}
+
+runner $ARGSFILE
+
+# while true; do
+#       ls $ARGSFILE | entr runner $ARGSFILE
+#       exit
+# done
+
+

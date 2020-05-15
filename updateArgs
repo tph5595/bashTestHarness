@@ -1,0 +1,6 @@
+#!/bin/sh
+# vim filetype=sh
+
+# $1 is the file to transform
+
+head -n1 $1 >> $1.processed && sed -i '1d' $1

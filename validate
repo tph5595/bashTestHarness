@@ -1,0 +1,6 @@
+#!/bin/sh
+# vim filetype=sh
+
+echo ERROR: VALIDATION IS NOT IMPLEMENTED
+exit 1
+
